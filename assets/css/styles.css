@@ -1,0 +1,19 @@
+/*empieza el reset*/
+
+a {
+  text-decoration: none;
+  color: inherit; /* evita azul subrayado */
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0; /* evita sangrías raras */
+}
+
+img {
+  display: block; /* elimina espacio fantasma debajo */
+  max-width: 100%; /* evita desbordes */
+  height: auto;
+}
+
+/*termina el reset*/
