@@ -7,18 +7,68 @@
 
     <!-- carpeta de estilos -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="./src/output.css" rel="stylesheet">
+    
 
 </head>
-<body class="overflow-hidden">
-    <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex">
-        <!-- <div class="relative">
-            <img src="assets/images/dot.png" alt="" class="w-screen h-[530px] opacity-15 ">
-        </div> -->
-        <div class="absolute">
-            hola
+<body class="overflow-hidden font-pixellari" >
+    <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap">
+        <div class="flex w-full m-10">
+            <div>
+                <!-- seccion playlist-->
+                <div class=" w-20 mr-44 ">
+                    <div class="">
+                        <img src="assets/images/blue-folder.png" alt="playlist #1" class="h-16 object-contain">
+                        <span class="flex justify-center">playlist #1</span>
+                    </div>
+                    <div class="mt-10">
+                        <img src="assets/images/yellow-folder.png" alt="playlist #1" class="h-16 object-contain">
+                        <span class="flex justify-center">playlist #2</span>
+                    </div>
+                    <div class="mt-10">
+                        <img src="assets/images/pink-folder.png" alt="playlist #1" class="h-16 object-contain">
+                        <span class="flex justify-center">playlist #3</span>
+                    </div>
+                </div>
+                <!-- seccion popup-->
+                <div class="mt-14 relative">
+                    <img src="assets/images/popup.png" alt="" class="h-24 object-contain">
+                    <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="absolute top-4 left-6 text-sm text-center text-[#1B62F3] w-44">
+                        CLICK PARA VER EL REPOSITORIO EN GITHUB !!
+                    </a>
+                </div>
+            </div>
+            
+            <!-- reproductor-->
+            <div class=" flex-1"><!-- para que se adapte al ancho-->
+                <div class="w-[800px] h-[385px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl">
+                </div>
+                <div class="w-[800px] h-[80px] bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] rounded-b-xl flex justify-between items-center">
+                    <div class=" m-4">
+                        <button>
+                            <img src="assets/images/play.png" alt="play" class="h-16 object-contain ">
+                        </button>
+                        <button>
+                            <img src="assets/images/stop.png" alt="play" class="h-14 object-contain ">
+                        </button>
+                        <button>
+                            <img src="assets/images/next.png" alt="play" class="h-12 object-contain ">
+                        </button>
+                        <button>
+                            <img src="assets/images/back.png" alt="play" class="h-12 object-contain ">
+                        </button>
+                    </div>
+
+                    <div class="bg-white w-[300px] h-[60px] m-4 border-[#1B62F3] border-2 rounded-xl shadow-inner shadow-[#5aa7ff]/100">
+
+                    </div>
+                </div>
+            </div>
+            
         </div>
+        
+        
+        
     </main>
     <footer class="w-full h-14 bg-[linear-gradient(to_bottom,#D0E8F9_0%,#9ED0F8_30%,#B6E1FC_60%,#A5D3F6_100%)] bg-no-repeat bg-cover ">
 
