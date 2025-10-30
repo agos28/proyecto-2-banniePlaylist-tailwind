@@ -12,8 +12,20 @@
 
 </head>
 <body class="overflow-hidden font-pixellari" >
-    <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap">
-        <div class="flex w-full m-10">
+    <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap relative">
+        <!-- formas backround-->
+        <div class="">
+            <img src="assets/images/starUno.png" alt="" class="absolute top-0.5 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
+
+            <img src="assets/images/starDos.png" alt="" class="absolute top-60 left-52 z-0 h-32 object-contain animate-[spin_28s_linear_infinite]">
+
+            <img src="assets/images/starTres.png" alt="" class="absolute top-80 -left-20 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
+
+            <img src="assets/images/starTres.png" alt="" class="absolute top-0.5 left-[1100px] z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
+
+            <img src="assets/images/pyoppuli.png" alt="" class="absolute z-50 top-40 left-60 h-24 object-contain animate-[spin_28s_linear_infinite]">
+        </div>
+        <div class="flex w-full m-10 z-10">
             <div>
                 <!-- seccion playlist-->
                 <div class=" w-20 mr-44 ">
@@ -41,8 +53,18 @@
             
             <!-- reproductor-->
             <div class=" flex-1"><!-- para que se adapte al ancho-->
-                <div class="w-[800px] h-[385px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl">
+                <div class="w-[800px] h-[385px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl relative">
+                    <!-- menu-->
+                     <div class="flex justify-center">
+                        <div class="w-[760px] h-[25px] absolute top-5 bg-[linear-gradient(to_bottom,#1034BE_1%,#2F49EB_48%,#2E22CD_99%)] rounded-t-lg"></div>
+                     </div>
+                    
+                    <!-- barra lateral-->
+                    <div class="w-[170px] h-[340px] ml-5 absolute top-[45px] bg-[linear-gradient(to_bottom,#4B97F9_16%,#579EFD_44%,#B4D4FE_66%,#FAFCFF_99%)] shadow-[inset_0_0_38.6px_6px_#6384BA] flex justify-center">
+                        <img src="assets/images/icon.png" alt="" class="h-24 object-contain rounded-lg mt-7 shadow-inner shadow-[#5aa7ff]/100">
+                    </div>
                 </div>
+                <!-- controlador-->
                 <div class="w-[800px] h-[80px] bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] rounded-b-xl flex justify-between items-center">
                     <div class=" m-4">
                         <button>
@@ -60,7 +82,6 @@
                     </div>
 
                     <div class="bg-white w-[300px] h-[60px] m-4 border-[#1B62F3] border-2 rounded-xl shadow-inner shadow-[#5aa7ff]/100">
-
                     </div>
                 </div>
             </div>

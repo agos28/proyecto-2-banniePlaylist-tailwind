@@ -7,7 +7,7 @@ a {
 
 ul, ol {
   list-style: none;
-  padding-left: 0; /* evita sangrías raras */
+  padding-left: 0; /* evita sangrías */
 }
 
 /*termina el reset*/
