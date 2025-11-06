@@ -5,24 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bannie Playlist !</title>
 
-    <!-- carpeta de estilos -->
+    <!-- cdn tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Configuración de Tailwind -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            'redaction-regular': ['Redaction35-Regular', 'sans-serif'],
-            'redaction-bold': ['Redaction35-Bold', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
+    <!-- configuracion tailwind -->
+    
 
+    <!-- carpeta de estilos -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="./src/output.css" rel="stylesheet"> <!-- no lo uso pero me sirve para que me aparezcan los atajos de las clases -->
 
     
 
@@ -41,35 +32,43 @@
 
             <img src="assets/images/pyoppuli.png" alt="" class="absolute z-50 top-40 left-60 h-24 object-contain animate-[spin_28s_linear_infinite]">
         </div>
-        <div class="flex w-full m-10 z-10">
+        <div class="flex w-full my-4 mx-10 z-10">
             <div>
                 <!-- seccion playlist-->
-                <div class=" w-20 mr-44 ">
-                    <div class="">
-                        <img src="assets/images/blue-folder.png" alt="playlist #1" class="h-16 object-contain">
-                        <span class="flex justify-center">playlist #1</span>
-                    </div>
-                    <div class="mt-10">
-                        <img src="assets/images/yellow-folder.png" alt="playlist #1" class="h-16 object-contain">
-                        <span class="flex justify-center">playlist #2</span>
-                    </div>
-                    <div class="mt-10">
-                        <img src="assets/images/pink-folder.png" alt="playlist #1" class="h-16 object-contain">
-                        <span class="flex justify-center">playlist #3</span>
-                    </div>
-                </div>
+                <div class="w-20 mr-44">
+  <!-- Playlist 1 -->
+  <div onclick="changePlaylist('playlist1')" class="group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+    <img src="assets/images/blue-folder.png" alt="playlist #1"
+         class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/blue-folder-hover.png')]">
+    <span class="mt-1 text-center">playlist #1</span>
+  </div>
+
+  <!-- Playlist 2 -->
+  <div onclick="changePlaylist('playlist2')" class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+    <img src="assets/images/yellow-folder.png" alt="playlist #2"
+         class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/yellow-folder-hover.png')]">
+    <span class="mt-1 text-center">playlist #2</span>
+  </div>
+
+  <!-- Playlist 3 -->
+  <div onclick="changePlaylist('playlist3')" class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+    <img src="assets/images/pink-folder.png" alt="playlist #3"
+         class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/pink-folder-hover.png')]">
+    <span class="mt-1 text-center">playlist #3</span>
+  </div>
+</div>
                 <!-- seccion popup-->
-                <div class="mt-14 relative">
+                <div class="mt-16 relative hover:scale-110">
                     <img src="assets/images/popup.png" alt="" class="h-24 object-contain">
-                    <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="absolute top-4 left-6 text-sm text-center text-[#1B62F3] w-44">
-                        click para ver el repositorio en github !!
+                    <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="absolute top-5 left-6 text-sm text-center text-[#1B62F3] w-44">
+                        click para ver el repositorio en <span class="font-redaction-bold text-[#F77DD9]">github</span> !!
                     </a>
                 </div>
             </div>
             
             <!-- reproductor-->
             <div class=" flex-1 drop-shadow-xl"><!-- para que se adapte al ancho-->
-                <div class="w-[800px] h-[385px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl relative">
+                <div class="w-[800px] h-[430px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl relative">
                     <!-- botones-->
                      <div class="mr-5 flex justify-end">
                         <div class="w-9 h-7 bg-blue-300"></div>
@@ -82,38 +81,52 @@
                      </div>
                     
                     <!-- barra lateral-->
-                    <div class="w-[170px] h-[340px] ml-5 absolute top-[45px] bg-[linear-gradient(to_bottom,#4B97F9_1%,#B4D4FE_50%,#FAFCFF_100%)] shadow-[inset_0_0_38.6px_6px_#4484EC] flex justify-center">
+                    <div class="w-[170px] h-[385px] ml-5 absolute top-[45px] bg-[linear-gradient(to_bottom,#4B97F9_1%,#B4D4FE_50%,#FAFCFF_100%)] shadow-[inset_0_0_38.6px_6px_#4484EC] flex justify-center flex-wrap">
+                        <div id="playlist-title"></div>
                         <img src="assets/images/icon.png" alt="" class="h-32 object-contain rounded-lg mt-7 shadow-inner shadow-[#5aa7ff]/100">
+                        <div id="playlist-list"></div>
                     </div>
-                    <div class="w-[585px] h-[340px] absolute top-[45px] left-[195px] bg-gray-100 flex items-center ">
+                    <div class="w-[585px] h-[385px] absolute top-[45px] left-[195px] bg-gray-100 flex items-center">
                         <div class="w-[20px] h-[320px] ml-6 bg-blue-300"></div>
-                        <!-- <div class="w-[350px] h-[320px] bg-white flex items-center">
-                                <img src="assets/images/vinyl-nevermind.png" alt="" class="h-[300px] object-contain animate-[spin_17s_linear_infinite]">
-                            </div>-->
+                        <div class="flex relative">
+                            <img id="vinyl" src="assets/images/vinyls/vinyl-hyyh.png" alt="" class="h-[300px] object-contain animate-[spin_17s_linear_infinite] absolute left-[210px]">
+                            <div class="w-[350px] h-[320px] bg-white relative"></div>
+                            
+                        </div>
                     </div>
                 </div>
                 <!-- controlador-->
                 <div class="w-[800px] h-[80px] bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] rounded-b-xl flex justify-between items-center">
-                    <div class=" m-4">
-                        <button>
-                            <img src="assets/images/play.png" alt="play" class="h-16 object-contain ">
+                    <div class="m-2 flex gap-1 items-baseline">
+
+                        <!-- play -->
+                        <button onclick="audio.play()" class="transition-transform duration-200 hover:scale-110">
+                        <img src="assets/images/play.png" alt="play" class="h-14 object-contain">
                         </button>
-                        <button>
-                            <img src="assets/images/stop.png" alt="play" class="h-14 object-contain ">
+
+                        <!-- pausa -->
+                        <button onclick="audio.pause()" class="transition-transform duration-200 hover:scale-110">
+                        <img src="assets/images/stop.png" alt="pause" class="h-12 object-contain">
                         </button>
-                        <button>
-                            <img src="assets/images/next.png" alt="play" class="h-12 object-contain ">
+
+                        <!-- anterior -->
+                        <button onclick="prevSong()" class="transition-transform duration-200 hover:scale-110">
+                        <img src="assets/images/back.png" alt="back" class="h-10 object-contain">
                         </button>
-                        <button>
-                            <img src="assets/images/back.png" alt="play" class="h-12 object-contain ">
+
+                        <!-- siguiente -->
+                        <button onclick="nextSong()" class="transition-transform duration-200 hover:scale-110">
+                        <img src="assets/images/next.png" alt="next" class="h-10 object-contain">
                         </button>
                     </div>
 
-                    <div class="bg-white w-[300px] h-[60px] m-4 border-[#1B62F3] border-2 rounded-xl shadow-inner shadow-[#5aa7ff]/100">
+
+                    <div class="bg-white w-[300px] h-[60px] m-4 border-[#1B62F3] border-2 rounded-xl shadow-inner shadow-[#5aa7ff]/100 flex flex-col justify-center items-center overflow-hidden">
+                        <div id="marquee-container" class="flex"></div>
+                        <span id="song-artist" class="text-[#F77DD9] text-sm">Artista</span>
                     </div>
                 </div>
             </div>
-            
         </div>
         
         
@@ -130,6 +143,8 @@
             <span>repositorio github</span>
         </div>
     </footer>
-    
+    <audio id="audio-player"></audio>
+<script src="assets/js/main.js"></script>
 </body>
+
 </html>

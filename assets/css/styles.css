@@ -27,3 +27,33 @@ ul, ol {
   font-display: swap;
 }
 
+.font-redaction-regular {
+  font-family: 'Redaction35-Regular', sans-serif;
+}
+
+.font-redaction-bold {
+  font-family: 'Redaction35-Bold', sans-serif;
+}
+
+@keyframes animacion-texto {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+.animacion-texto {
+  display: inline-block;
+  animation: animacion-texto 15s linear infinite;
+  white-space: nowrap;
+  
+}
+
+
+
+
+
+
+
