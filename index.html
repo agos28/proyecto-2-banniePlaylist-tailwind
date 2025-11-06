@@ -7,11 +7,27 @@
 
     <!-- carpeta de estilos -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="./src/output.css" rel="stylesheet">
+
+<!-- Configuración de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'redaction-regular': ['Redaction35-Regular', 'sans-serif'],
+            'redaction-bold': ['Redaction35-Bold', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
     
 
 </head>
-<body class="overflow-hidden font-pixellari" >
+<body class="overflow-hidden font-redaction-regular">
     <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap relative">
         <!-- formas backround-->
         <div class="">
@@ -46,7 +62,7 @@
                 <div class="mt-14 relative">
                     <img src="assets/images/popup.png" alt="" class="h-24 object-contain">
                     <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="absolute top-4 left-6 text-sm text-center text-[#1B62F3] w-44">
-                        CLICK PARA VER EL REPOSITORIO EN GITHUB !!
+                        click para ver el repositorio en github !!
                     </a>
                 </div>
             </div>

@@ -1,17 +1,29 @@
-/*empieza el reset*/
-
+/* === RESET === */
 a {
   text-decoration: none;
-  color: inherit; /* evita azul subrayado */
+  color: inherit;
 }
 
 ul, ol {
   list-style: none;
-  padding-left: 0; /* evita sangrías */
+  padding-left: 0;
 }
 
-/*termina el reset*/
+@font-face {
+  font-family: 'Redaction35-Regular';
+  src: url('../fonts/Redaction35-Regular.woff2') format('woff2'),
+       url('../fonts/Redaction35-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-@import "tailwindcss";
-
+@font-face {
+  font-family: 'Redaction35-Bold';
+  src: url('../fonts/Redaction35-Bold.woff2') format('woff2'),
+       url('../fonts/Redaction35-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
