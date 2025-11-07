@@ -8,20 +8,15 @@
     <!-- cdn tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- configuracion tailwind -->
-    
-
     <!-- carpeta de estilos -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href="./src/output.css" rel="stylesheet"> <!-- no lo uso pero me sirve para que me aparezcan los atajos de las clases -->
-
-    
 
 </head>
 <body class="overflow-hidden font-redaction-regular">
     <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap relative">
         <!-- formas backround-->
-        <div class="">
+        <div>
             <img src="assets/images/starUno.png" alt="" class="absolute top-0.5 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
 
             <img src="assets/images/starDos.png" alt="" class="absolute top-60 left-52 z-0 h-32 object-contain animate-[spin_28s_linear_infinite]">
@@ -36,27 +31,27 @@
             <div>
                 <!-- seccion playlist-->
                 <div class="w-20 mr-44">
-  <!-- Playlist 1 -->
-  <div onclick="changePlaylist('playlist1')" class="group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
-    <img src="assets/images/blue-folder.png" alt="playlist #1"
-         class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/blue-folder-hover.png')]">
-    <span class="mt-1 text-center">playlist #1</span>
-  </div>
+                    <!-- Playlist 1 -->
+                    <div onclick="changePlaylist('playlist1')" class="group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+                        <img src="assets/images/blue-folder.png" alt="playlist #1"
+                            class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/blue-folder-hover.png')]">
+                        <span class="mt-1 text-center">playlist #1</span>
+                    </div>
 
-  <!-- Playlist 2 -->
-  <div onclick="changePlaylist('playlist2')" class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
-    <img src="assets/images/yellow-folder.png" alt="playlist #2"
-         class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/yellow-folder-hover.png')]">
-    <span class="mt-1 text-center">playlist #2</span>
-  </div>
+                    <!-- Playlist 2 -->
+                    <div onclick="changePlaylist('playlist2')" class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+                        <img src="assets/images/yellow-folder.png" alt="playlist #2"
+                            class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/yellow-folder-hover.png')]">
+                        <span class="mt-1 text-center">playlist #2</span>
+                    </div>
 
-  <!-- Playlist 3 -->
-  <div onclick="changePlaylist('playlist3')" class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
-    <img src="assets/images/pink-folder.png" alt="playlist #3"
-         class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/pink-folder-hover.png')]">
-    <span class="mt-1 text-center">playlist #3</span>
-  </div>
-</div>
+                    <!-- Playlist 3 -->
+                    <div onclick="changePlaylist('playlist3')" class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+                        <img src="assets/images/pink-folder.png" alt="playlist #3"
+                            class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/pink-folder-hover.png')]">
+                        <span class="mt-1 text-center">playlist #3</span>
+                    </div>
+                </div>
                 <!-- seccion popup-->
                 <div class="mt-16 relative hover:scale-110">
                     <img src="assets/images/popup.png" alt="" class="h-24 object-contain">
@@ -69,15 +64,27 @@
             <!-- reproductor-->
             <div class=" flex-1 drop-shadow-xl"><!-- para que se adapte al ancho-->
                 <div class="w-[800px] h-[430px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl relative">
+                    <span class="ml-5 text-[#5aa7ff] text-xs flex items-center">Bannie Playlist !!</span>
                     <!-- botones-->
                      <div class="mr-5 flex justify-end">
-                        <div class="w-9 h-7 bg-blue-300"></div>
+                        <div class="w-9 h-7 bg-blue-300 flex justify-center items-center">
+                            <div class="w-6 h-1 bg-white "></div>
+                        </div>
                         <div class="w-9 h-7 bg-blue-400 mr-2 ml-2"></div>
                         <div class="w-9 h-7 bg-red-200"></div>
                      </div>
                     <!-- menu-->
                      <div class="flex justify-center">
-                        <div class="w-[760px] h-[25px] absolute top-5 bg-[linear-gradient(to_bottom,#1034BE_1%,#2F49EB_48%,#2E22CD_99%)] rounded-t-lg"></div>
+                        <div class="w-[760px] h-[25px] absolute top-5 bg-[linear-gradient(to_bottom,#1034BE_1%,#2F49EB_48%,#2E22CD_99%)] rounded-t-lg">
+                            <div class="text-white">
+                                <span class="mx-4">file</span>
+                                <span class="mx-4">edit</span>
+                                <span class="mx-4">movie</span>
+                                <span class="mx-4">window</span>
+                                <span class="mx-4">help</span>
+                            </div>
+                        </div>
+                        
                      </div>
                     
                     <!-- barra lateral-->

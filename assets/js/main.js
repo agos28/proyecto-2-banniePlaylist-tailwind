@@ -1,4 +1,4 @@
-// playlist
+
 const playlists = {
   playlist1: [
     { title: "RUN", artist: "BTS", vinyl: "assets/images/vinyls/vinyl-hyyh.png", song: "assets/audio/song-run-bts.mp3" },
@@ -35,8 +35,7 @@ const songTitle = document.querySelectorAll(".song-title");
 const playlistList = document.getElementById("playlist-list");
 
 function showPlaylistSongs() {
-  playlistList.innerHTML = ""; 
-
+ 
   const songs = playlists[currentPlaylist];
   for (let i = 0; i < songs.length; i++) {
     const textoo = document.createElement("h3");
@@ -49,19 +48,17 @@ function showPlaylistSongs() {
 
 showPlaylistSongs();
 
-// repeticiones del título
-const repeatCount = 100;
+// repeticiones del titulo
+const repeatCount = 6;
 
 function loadSong() {
   const song = playlists[currentPlaylist][currentSongIndex];
   vinylImg.src = song.vinyl;
   audio.src = song.song;
+
   songArtist.textContent = song.artist;
 
-  // saco el contenido de antes
-  marqueeContainer.innerHTML = "";
-
-  // crea los spans 
+  marqueeContainer.innerHTML = ""; 
   for (let i = 0; i < repeatCount; i++) {
     const span = document.createElement("span");
     span.textContent = song.title;
@@ -69,6 +66,7 @@ function loadSong() {
     marqueeContainer.appendChild(span);
   }
 }
+
 
 
 // controlws

@@ -39,14 +39,17 @@ ul, ol {
   0% {
     transform: translateX(0%);
   }
+  99% {
+    transform: translateX(-158%);
+  }
   100% {
-    transform: translateX(-500%);
+    transform: translateX(0%);
   }
 }
 
 .animacion-texto {
   display: inline-block;
-  animation: animacion-texto 15s linear infinite;
+  animation: animacion-texto 1s linear infinite;
   white-space: nowrap;
   
 }
