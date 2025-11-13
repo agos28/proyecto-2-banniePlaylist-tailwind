@@ -1,4 +1,3 @@
-
 // PLAYLISTS
 const playlists = {
   playlist1: [
@@ -46,10 +45,10 @@ const playlist3Btn = document.getElementById("playlist3-btn");
 // FUNCIONES PRINCIPALES
 
 function showPlaylistSongs() {
-  playlistList.replaceChildren();
-  const songs = playlists[currentPlaylist];
+  playlistList.replaceChildren();//borra/reemplaza el contenido que estaba antes para que no se acumule
+  const songs = playlists[currentPlaylist];//agarra la playlist y las canciones de esa, empieza por defecto en la playlist1
 
-  for (let i = 0; i < songs.length; i++) {
+  for (let i = 0; i < songs.length; i++) {//para todas las canciones q esten en la playlist crea n div 
     const contenedorListaPlaylist = document.createElement("div");
     contenedorListaPlaylist.classList.add("flex", "gap-2");
 
@@ -65,12 +64,12 @@ function showPlaylistSongs() {
     icon.classList.add("playing-icon", "animate-pulse", "w-[12px]", "h-[12px]");
     icon.style.visibility = "hidden";
 
-    contenedorIcono.appendChild(icon);
-    contenedorListaPlaylist.appendChild(contenedorIcono);
+    contenedorIcono.appendChild(icon);//agrega el icono al contenedor
+    contenedorListaPlaylist.appendChild(contenedorIcono);//agrega el contenedor de las canciones
     contenedorListaPlaylist.appendChild(title);
     playlistList.appendChild(contenedorListaPlaylist);
 
-    title.addEventListener("click", function () {
+    title.addEventListener("click", function () {//cuando se hace clicj en el titulo carga la cancion
       currentSongIndex = i;
       loadSong();
       audio.play();
@@ -78,82 +77,47 @@ function showPlaylistSongs() {
   }
 }
 
-
 function updatePlayingIcon() {
-  const icons = document.getElementsByClassName("playing-icon");
+  const icons = document.getElementsByClassName("playing-icon"); // agarra el icono
   for (let i = 0; i < icons.length; i++) {
-    icons[i].style.visibility = (i === currentSongIndex) ? "visible" : "hidden";
+    if (i === currentSongIndex) {//si el icono esta en el mismo contenedor que la cancion que esta sonando...
+      icons[i].style.visibility = "visible"; // //esto es para que si la cancion esta sonando el estado sea visible pero si no lo esta entonces este oculto
+    } else {
+      icons[i].style.visibility = "hidden"; // 
+    }
   }
 }
 
 
-const repeatCount = 6;
+
+const repeatCount = 6;//cantidad de veces que se repite el titulo
 
 function loadSong() {
-  const song = playlists[currentPlaylist][currentSongIndex];
+  const song = playlists[currentPlaylist][currentSongIndex];//agarra la playlist y la cancion que esta sonando y cambia a los elementos de cada una
   vinylImg.src = song.vinyl;
   audio.src = song.song;
   songArtist.textContent = song.artist;
 
-  marqueeContainer.replaceChildren();
-  for (let i = 0; i < repeatCount; i++) {
+  marqueeContainer.replaceChildren();//borra/reemplaza el contenido que estaba antes para que no se acumule
+  for (let i = 0; i < repeatCount; i++) {//esto es para que el titulo se repita
     const span = document.createElement("span");
     span.textContent = song.title;
     span.classList.add("song-title", "text-[#1B62F3]", "font-redaction-bold", "text-lg", "animacion-texto", "tracking-widest", "w-[420px]");
     marqueeContainer.appendChild(span);
   }
 
-  updatePlayingIcon();
+  updatePlayingIcon();//cada que cambia la cancion llama a la otra funcion para que tambien cambie el icono
 }
 
+////////////////////////////////////// CAMBIAR PLAYLIST
 
-function changePlaylist(name) {
-  currentPlaylist = name;
+function changePlaylist(name) {//si hace click en la playlist llama a esto para que cambie el contenido
+  currentPlaylist = name;//se ingresa el nombre de la playlist que se va a reproducir
   currentSongIndex = 0;
   showPlaylistSongs();
   loadSong();
   audio.play();
 }
-
-
-function nextSong() {
-  currentSongIndex = (currentSongIndex + 1) % playlists[currentPlaylist].length;
-  loadSong();
-  audio.play();
-}
-
-
-function prevSong() {
-  currentSongIndex = (currentSongIndex - 1 + playlists[currentPlaylist].length) % playlists[currentPlaylist].length;
-  loadSong();
-  audio.play();
-}
-
-
-// EVENTOS
-
-playBtn.addEventListener("click", function () {
-  if (audio.paused) {
-    audio.play();
-    playIcon.src = "assets/images/pause.png"; // cambia al ícono de pausa
-  } else {
-    audio.pause();
-    playIcon.src = "assets/images/play.png"; // vuelve al ícono de play
-  }
-});
-
-restartBtn.addEventListener("click", function () {
-  audio.currentTime = 0; // vuelve al inicio
-  audio.play(); // la reproduce
-});
-
-prevBtn.addEventListener("click", function () {
-  prevSong();
-});
-
-nextBtn.addEventListener("click", function () {
-  nextSong();
-});
 
 playlist1Btn.addEventListener("click", function () {
   changePlaylist("playlist1");
@@ -167,17 +131,42 @@ playlist3Btn.addEventListener("click", function () {
   changePlaylist("playlist3");
 });
 
-audio.addEventListener("pause", function () {
-  const icons = document.getElementsByClassName("playing-icon");
-  for (let i = 0; i < icons.length; i++) {
-    icons[i].style.visibility = "hidden";
+////////////////////////////////////// BOTONES DEL REPRODUCTOR
+
+function nextSong() {
+  currentSongIndex++;
+  loadSong();
+  audio.play();
+}
+
+function prevSong() {
+  currentSongIndex--;
+  loadSong();
+  audio.play();
+}
+
+playBtn.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play();
+    playIcon.src = "assets/images/pause.png"; // cambia al ícono de pausa
+  } else {
+    audio.pause();
+    playIcon.src = "assets/images/play.png"; // vuelve al ícono de play
   }
 });
 
-audio.addEventListener("play", function () {
-  updatePlayingIcon();
+restartBtn.addEventListener("click", function () {
+  audio.currentTime = 0; // vuelve al inicio, definicion de mdn: specifies the current playback time in seconds.
+  audio.play(); // la reproduce, definicion de mdn: attempts to begin playback of the media.
 });
 
+prevBtn.addEventListener("click", function () {
+  prevSong();
+});
+
+nextBtn.addEventListener("click", function () {
+  nextSong();
+});
 
 // INICIO
 showPlaylistSongs();
