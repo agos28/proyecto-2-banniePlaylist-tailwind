@@ -46,24 +46,42 @@ ul, ol {
   font-family: 'Billo', sans-serif;
 }
 
+/* funciona pero en el caso de los textos cortos tardan mas en aparecer, pero si el translateX es menor entonces los titulos largos desaparecen antes de salir del contenedor. separe las animaciones porque sino el step no funciona ya que tomaria al movimiento y la op al mismo tiempo y no llega a aparecer el texto, si estan separados cada uno se activa a su propio tiempo*/
+@keyframes mover-texto {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-700px); }
+}
+
+@keyframes desaparecer-texto {
+  0%, 99% { opacity: 1; }
+  100%    { opacity: 0; }
+}
+
+.animacion-texto {
+  display: inline-block;
+  white-space: nowrap;                   
+  animation:
+    mover-texto 6s linear infinite,
+    desaparecer-texto 6s step-end infinite; 
+}
+
+/* dejo la forma la forma que estaba antes, funciona bien pero el texto se va desvaneciendo. para probarse hay que reemplazar en animation por esto: animation: animacion-texto 6s linear infinite;
+
 @keyframes animacion-texto {
   0% {
     transform: translateX(0%);
   }
   99% {
-    transform: translateX(-158%);
+    transform: translateX(-100%);
+
   }
   100% {
     transform: translateX(0%);
+    opacity: 0;
   }
 }
 
-.animacion-texto {
-  display: inline-block;
-  animation: animacion-texto 6s linear infinite;
-  white-space: nowrap;
-  
-}
+*/
 
 @keyframes rotar-lados {
   0%   { transform: rotate(0deg); }
@@ -76,7 +94,6 @@ ul, ol {
 .animate-rotar-lados {
   display: inline-block;
   animation: rotar-lados 1.5s ease-in-out infinite;
-  
 }
 
 

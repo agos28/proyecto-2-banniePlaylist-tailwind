@@ -54,7 +54,7 @@ function showPlaylistSongs() {
 
     const title = document.createElement("h3");
     title.textContent = songs[i].title;
-    title.classList.add("text-sm", "font-redaction-bold", "text-[#1B62F3]", "my-1", "cursor-pointer", "w-[100px]");
+    title.classList.add("text-sm", "font-redaction-bold", "text-[#1B62F3]", "my-1", "cursor-pointer", "w-[100px]","hover:text-white");
 
     const contenedorIcono = document.createElement("div");
     contenedorIcono.classList.add("flex", "items-top", "mt-2");
@@ -90,7 +90,7 @@ function updatePlayingIcon() {
 
 
 
-const repeatCount = 6;//cantidad de veces que se repite el titulo
+const repeatCount = 1;//cantidad de veces que se repite el titulo
 
 function loadSong() {
   const song = playlists[currentPlaylist][currentSongIndex];//agarra la playlist y la cancion que esta sonando y cambia a los elementos de cada una
