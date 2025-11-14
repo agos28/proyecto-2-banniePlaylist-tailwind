@@ -15,197 +15,202 @@
     <link href="./src/output.css" rel="stylesheet"> <!-- no lo uso pero me sirve para que me aparezcan los atajos de las clases -->
 
 </head>
-<body class="overflow-hidden font-redaction-regular">
-    <main class=" w-screen h-[538px] bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap relative">
-        <!-- formas backround-->
-        <div>
-            <img src="assets/images/starUno.png" alt="" class="absolute top-0.5 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
-            <img src="assets/images/starDos.png" alt="" class="absolute top-60 left-52 z-0 h-32 object-contain animate-[spin_28s_linear_infinite]">
-
-            <img src="assets/images/starTres.png" alt="" class="absolute top-80 -left-20 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
-
-            <img src="assets/images/starTres.png" alt="" class="absolute top-0.5 left-[1100px] z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
-
-            <img src="assets/images/pyoppuli.png" alt="" class="absolute z-50 top-40 left-60 h-24 object-contain animate-[spin_28s_linear_infinite]">
-
-            <span class="w-[16px] h-[16px] absolute scale-50 text-[#5aa7ff] top-96 left-[1110px]">
-                ⠀⠀⠀⠀⠀⣴⠒⠒⠤⣄⡀⠀⠀⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⠀
-⠀⠀⣀⣤⡸⣽⣀⠀⠀⣐⡽⣷⣄⣠⣴⣛⡉⠀⡁⣸⣇⠀⠀⠀
-⠀⣞⢉⡻⠤⣤⣙⢿⠿⠏⠛⠛⠻⠛⠟⠿⣿⣗⡋⣻⣍⠑⠢⠄
-⢰⡀⣾⣼⣿⠟⠋⠀⣤⡄⠀⠀⠀⠀⢀⣀⠈⠘⢿⣿⣮⣷⡂⣼
-⠈⢷⣼⡟⠃⠀⢀⣤⣟⠃⣀⣾⣇⡀⠸⠿⡀⠀⠀⠹⣿⠟⢀⡮
-⠀⠀⣽⡇⠀⠀⠈⣙⡭⠤⠼⢯⡭⣅⣀⡓⠞⠃⠀⠀⠀⣾⡟⠁
-⠀⠀⣿⠁⢀⡴⠋⠁⠀⠀⠀⠈⠳⠶⠿⣏⣷⣦⠀⠀⠀⣟⠁⠀
-⠀⠀⢻⡀⣼⠃⢠⣤⡄⠀⠀⠀⠀⠀⢀⣀⢿⣭⣧⠀⢀⡎⠀⠀
-⠀⠀⠈⣷⣿⣥⡈⠋⠁⠀⢴⣶⠄⠀⠸⠿⠀⠐⣟⣀⣼⠀⠀⠀
-⠀⠀⡼⠇⣄⢭⠻⠦⠖⠒⠲⣤⡀⠀⠀⢀⣨⡿⠟⠉⠀⠀⠀⠀
-⠀⢀⣇⠘⢟⣿⣿⣦⣤⣄⣀⣸⡿⠟⠛⠛⢇⠀⠀⠀⠀⠀⠀⠀
-⣸⡞⢻⣤⠈⠉⡋⣿⣿⣿⠂⠀⠀⠀⠀⢀⣼⠀⠀⠀⠀⠀⠀⠀
-⡏⠃⢸⣭⢣⣀⣾⠿⣯⡯⣥⣀⣀⢠⠖⠚⣷⣶⠶⡾⡄⠀⠀⠀
-⢧⣤⣼⡟⠀⠙⣿⠃⠀⢣⡀⠀⠀⠀⠀⢀⣹⡿⡠⢠⣗⠀⠀⠀
-⠈⠛⠛⠢⠤⠤⣿⣦⠀⢀⡇⠀⣀⢠⣠⣼⠇⠉⠁⠉⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠈⠛⠿⠾⢯⠵⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-
-            </span>
-        </div>
-        <div class="flex w-full my-4 mx-10 z-10">
+<body class="overflow-x-hidden font-redaction-regular">
+    <div class="origin-top scale-100 flex items-center flex-wrap">
+        <main class=" w-screen h-screen bg-[linear-gradient(to_bottom,#5275E9_1%,#9AB5F3_24%,#CCDCFB_41%,#D7F0E0_51%,#E0FFAA_62%,#D8FDA1_77%,#D1F5A0_90%,#CDEFA0_99%)] bg-no-repeat flex flex-wrap relative">
+            <!-- formas backround-->
             <div>
-                <!-- seccion playlist-->
-                <div class="w-20 mr-44 text-[#1B62F3]">
-                    <!-- Playlist 1 -->
-                    <div id="playlist1-btn"
-                        class="group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
-                        <img src="assets/images/blue-folder.png" alt="playlist #1"
-                        class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/blue-folder-hover.png')]">
-                        <span class="mt-1 text-center">playlist #1</span>
-                    </div>
+                <img src="assets/images/starUno.png" alt="" class="absolute top-0.5 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
+                <img src="assets/images/starDos.png" alt="" class="absolute top-60 left-52 z-0 h-32 object-contain animate-[spin_28s_linear_infinite]">
 
-                    <!-- Playlist 2 -->
-                    <div id="playlist2-btn"
-                        class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
-                        <img src="assets/images/yellow-folder.png" alt="playlist #2"
-                        class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/yellow-folder-hover.png')]">
-                        <span class="mt-1 text-center">playlist #2</span>
-                    </div>
+                <img src="assets/images/starTres.png" alt="" class="absolute top-80 -left-20 z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
 
-                    <!-- Playlist 3 -->
-                    <div id="playlist3-btn"
-                        class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
-                        <img src="assets/images/pink-folder.png" alt="playlist #3"
-                        class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/pink-folder-hover.png')]">
-                        <span class="mt-1 text-center">playlist #3</span>
-                    </div>
-                </div>
+                <img src="assets/images/starTres.png" alt="" class="absolute top-0.5 left-[1100px] z-0 h-52 object-contain animate-[spin_28s_linear_infinite]">
 
-                <!-- seccion popup-->
-                <div class="relative hover:scale-110 animate-[bounce_2s_ease-in-out_infinite]">
-                    <img src="assets/images/popup.png" alt="" class="w-[200px] object-contain">
-                    <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="absolute top-24 left-3 text-sm text-center text-[#1B62F3] w-44">
-                        click para ver el repositorio en <span class="font-redaction-bold text-[#F77DD9]">github</span> !!
-                    </a>
-                </div>
+                <img src="assets/images/pyoppuli.png" alt="" class="absolute z-50 top-40 left-60 h-24 object-contain animate-[spin_28s_linear_infinite]">
+
+                <span class="w-[16px] h-[16px] absolute scale-50 text-[#5aa7ff] top-96 left-[1110px]">
+                    ⠀⠀⠀⠀⠀⣴⠒⠒⠤⣄⡀⠀⠀⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⠀
+    ⠀⠀⣀⣤⡸⣽⣀⠀⠀⣐⡽⣷⣄⣠⣴⣛⡉⠀⡁⣸⣇⠀⠀⠀
+    ⠀⣞⢉⡻⠤⣤⣙⢿⠿⠏⠛⠛⠻⠛⠟⠿⣿⣗⡋⣻⣍⠑⠢⠄
+    ⢰⡀⣾⣼⣿⠟⠋⠀⣤⡄⠀⠀⠀⠀⢀⣀⠈⠘⢿⣿⣮⣷⡂⣼
+    ⠈⢷⣼⡟⠃⠀⢀⣤⣟⠃⣀⣾⣇⡀⠸⠿⡀⠀⠀⠹⣿⠟⢀⡮
+    ⠀⠀⣽⡇⠀⠀⠈⣙⡭⠤⠼⢯⡭⣅⣀⡓⠞⠃⠀⠀⠀⣾⡟⠁
+    ⠀⠀⣿⠁⢀⡴⠋⠁⠀⠀⠀⠈⠳⠶⠿⣏⣷⣦⠀⠀⠀⣟⠁⠀
+    ⠀⠀⢻⡀⣼⠃⢠⣤⡄⠀⠀⠀⠀⠀⢀⣀⢿⣭⣧⠀⢀⡎⠀⠀
+    ⠀⠀⠈⣷⣿⣥⡈⠋⠁⠀⢴⣶⠄⠀⠸⠿⠀⠐⣟⣀⣼⠀⠀⠀
+    ⠀⠀⡼⠇⣄⢭⠻⠦⠖⠒⠲⣤⡀⠀⠀⢀⣨⡿⠟⠉⠀⠀⠀⠀
+    ⠀⢀⣇⠘⢟⣿⣿⣦⣤⣄⣀⣸⡿⠟⠛⠛⢇⠀⠀⠀⠀⠀⠀⠀
+    ⣸⡞⢻⣤⠈⠉⡋⣿⣿⣿⠂⠀⠀⠀⠀⢀⣼⠀⠀⠀⠀⠀⠀⠀
+    ⡏⠃⢸⣭⢣⣀⣾⠿⣯⡯⣥⣀⣀⢠⠖⠚⣷⣶⠶⡾⡄⠀⠀⠀
+    ⢧⣤⣼⡟⠀⠙⣿⠃⠀⢣⡀⠀⠀⠀⠀⢀⣹⡿⡠⢠⣗⠀⠀⠀
+    ⠈⠛⠛⠢⠤⠤⣿⣦⠀⢀⡇⠀⣀⢠⣠⣼⠇⠉⠁⠉⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠈⠛⠿⠾⢯⠵⠞⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+                </span>
             </div>
-            
-            <!-- reproductor-->
-            <div class=" flex-1 drop-shadow-xl"><!-- para que se adapte al ancho-->
-                <div class="w-[800px] h-[430px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl relative">
-                    
-                    <!-- botones-->
-                     <div class="mr-5 flex justify-end">
-                        <div class="w-9 h-7 bg-blue-300 flex justify-center items-center mr-2">
-                            <div class="w-6 h-1 bg-white "></div>
+            <div class="flex w-full my-4 mx-10 z-10">
+                <div>
+                    <!-- seccion playlist-->
+                    <div class="w-20 mr-44 text-[#1B62F3]">
+                        <!-- Playlist 1 -->
+                        <div id="playlist1-btn"
+                            class="group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+                            <img src="assets/images/blue-folder.png" alt="playlist #1"
+                            class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/blue-folder-hover.png')]">
+                            <span class="mt-1 text-center">playlist #1</span>
                         </div>
-                        <div class="w-9 h-7 bg-blue-400 mr-2 flex items-center">
-                            <img src="assets/images/bt2.png" alt="" class="scale-50 mb-1">
+
+                        <!-- Playlist 2 -->
+                        <div id="playlist2-btn"
+                            class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+                            <img src="assets/images/yellow-folder.png" alt="playlist #2"
+                            class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/yellow-folder-hover.png')]">
+                            <span class="mt-1 text-center">playlist #2</span>
                         </div>
-                        <div class="w-9 h-7 bg-red-200 flex items-center">
-                            <img src="assets/images/bt3.png" alt="" class="scale-50 mb-1">
+
+                        <!-- Playlist 3 -->
+                        <div id="playlist3-btn"
+                            class="mt-10 group transition-transform duration-300 ease-out hover:scale-125 flex flex-col items-center cursor-pointer">
+                            <img src="assets/images/pink-folder.png" alt="playlist #3"
+                            class="h-16 object-contain transition-all duration-300 group-hover:content-[url('assets/images/pink-folder-hover.png')]">
+                            <span class="mt-1 text-center">playlist #3</span>
                         </div>
-                     </div>
-                    <!-- menu-->
-                     <div class="flex justify-center">
-                        <div class="w-[760px] h-[25px] absolute top-5 bg-[linear-gradient(to_bottom,#1034BE_1%,#2F49EB_48%,#2E22CD_99%)] rounded-t-lg flex items-center justify-between">
-                            <div class="text-white">
-                                <span class="mx-4">file</span>
-                                <span class="mx-4">edit</span>
-                                <span class="mx-4">movie</span>
-                                <span class="mx-4">window</span>
-                                <span class="mx-4">help</span>
-                            </div>
-                            <div class="w-[300px] h-[15px] bg-white rounded-md">
-                                <span class="text-[#1B62F3] text-xs flex items-center ml-4">https://www.banniePlaylist.com</span>
-                            </div>
-                            <img src="assets/images/worldIcon.png" alt="world-icon" class="mr-5">
-                        </div>
-                     </div>
-                    
-                    <!-- barra lateral-->
-                    <div class="w-[170px] h-[385px] ml-5 absolute top-[45px] bg-[linear-gradient(to_bottom,#4B97F9_1%,#B4D4FE_50%,#FAFCFF_100%)] shadow-[inset_0_0_38.6px_6px_#4484EC] flex justify-center flex-wrap">
-                        <span class="font-redaction-bold text-white my-3">Bannie Playlist</span>
-                        <img src="assets/images/icon.png" alt="" class="h-32 object-contain rounded-lg shadow-inner shadow-[#5aa7ff]/100">
-                        <div class="border-white border py-0.5 px-2 rounded-full my-2 flex">
-                            <span class="text-xs text-white">Now listening</span>
-                            <img src="assets/images/listening.png" alt="" class="object-contain scale-75 ml-2">
-                        </div>
-                        <div id="playlist-list" class="h-[188px]"></div>
                     </div>
-                    <div class="w-[585px] h-[385px] absolute top-[45px] left-[195px] bg-[url('assets/images/bg-reproductor.png')] bg-cover bg-center flex items-center">
+
+                    <!-- seccion popup-->
+                    <div class="relative hover:scale-110 animate-[bounce_2s_ease-in-out_infinite]">
+                        <img src="assets/images/popup.png" alt="" class="w-[200px] object-contain">
+                        <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="absolute top-24 left-3 text-sm text-center text-[#1B62F3] w-44">
+                            click para ver el repositorio en <span class="font-redaction-bold text-[#F77DD9]">github</span> !!
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- reproductor-->
+                <div class=" flex-1 drop-shadow-xl"><!-- para que se adapte al ancho-->
+                    <div class="w-[800px] h-[430px] bg-[linear-gradient(to_bottom,#ffffff_1%,#8CBFFF_8%,#4B97F9_16%,#579EFD_48%,#B4D4FE_74%,#FAFCFF_99%)] rounded-t-xl relative">
                         
-                        <div class="w-[20px] h-[320px] ml-6 bg-blue-300"></div>
-                        <div class="flex relative">
-                            <img id="vinyl" alt="" class="h-[300px] object-contain animate-[spin_17s_linear_infinite] absolute left-[210px] shadow-xl shadow-[#5aa7ff]/100 rounded-full">
-                            <div class="w-[350px] h-[320px] bg-white relative shadow-xl shadow-[#5aa7ff]/100">
-                                <!-- texto BANNIE -->
-                                <div class="absolute inset-0 z-10 text-6xl text-[#5aa7ff] font-billo mt-7 ml-5">
-                                    <span class="animate-rotar-lados">b</span>
-                                    <span class="text-[#5aa7ff] animate-rotar-lados [animation-delay:0.1s]">a</span>
-                                    <span class="animate-rotar-lados [animation-delay:0.2s]">n</span>
-                                    <span class="animate-rotar-lados [animation-delay:0.3s]">n</span>
-                                    <span class="text-[#5aa7ff] animate-rotar-lados [animation-delay:0.4s]">i</span>
-                                    <span class="animate-rotar-lados [animation-delay:0.5s]">e</span>
-                                </div>
-                                
-                                <!-- imagen de fondo -->
-                                <img src="assets/images/bg-playlist.png" alt="" class="absolute inset-0 z-0 opacity-45">
-                                <div class="overflow-hidden border-[#1B62F3] border-2 w-[239px] h-[80px] absolute top-24 left-7 bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] flex">
-                                    <img src="assets/images/starCinco.png" alt="" class="absolute w-28 -top-6 -left-3 animate-[spin_28s_linear_infinite]">
-                                    <img src="assets/images/starCinco.png" alt="" class="absolute w-24 left-40 animate-[spin_28s_linear_infinite]">
-                                    <img src="assets/images/starCuatro.png" alt="" class="absolute w-25 left-28 animate-[spin_28s_linear_infinite]">
-                                    <img src="assets/images/starCuatro.png" alt="" class="absolute w-28 animate-[spin_28s_linear_infinite]">
-                                    <img src="assets/images/starCinco.png" alt="" class="absolute w-32 left-14 bottom-1 animate-[spin_28s_linear_infinite]">
-                                </div>
-                                <img src="assets/images/iconUno.png" alt="" class="absolute w-5 left-[120px] top-[245px] animate-bounce [animation-delay:0s]">
-                                <img src="assets/images/iconDos.png" alt="" class="absolute w-4 left-[135px] top-[238px] animate-bounce [animation-delay:0.3s]">
-                                <img src="assets/images/iconTres.png" alt="" class="absolute w-3 left-[150px] top-[230px] animate-bounce [animation-delay:0.6s]">
-                                
-                                <img src="assets/images/Asset 6.png" alt="" class="absolute top-20 left-36">
-                                <span class="absolute top-[93px] left-[265px] text-[#1B62F3] font-redaction-bold text-xs w-10">FUN TIME !</span>
+                        <!-- botones-->
+                        <div class="mr-5 flex justify-end">
+                            <div class="w-9 h-7 bg-blue-300 flex justify-center items-center mr-2">
+                                <div class="w-6 h-1 bg-white "></div>
                             </div>
-                            <img src="assets/images/Asset 2.png" alt="" class="absolute left-[430px] top-[280px]">
+                            <div class="w-9 h-7 bg-blue-400 mr-2 flex items-center">
+                                <img src="assets/images/bt2.png" alt="" class="scale-50 mb-1">
+                            </div>
+                            <div class="w-9 h-7 bg-red-200 flex items-center">
+                                <img src="assets/images/bt3.png" alt="" class="scale-50 mb-1">
+                            </div>
+                        </div>
+                        <!-- menu-->
+                        <div class="flex justify-center">
+                            <div class="w-[760px] h-[25px] absolute top-5 bg-[linear-gradient(to_bottom,#1034BE_1%,#2F49EB_48%,#2E22CD_99%)] rounded-t-lg flex items-center justify-between">
+                                <div class="text-white">
+                                    <span class="mx-4">file</span>
+                                    <span class="mx-4">edit</span>
+                                    <span class="mx-4">movie</span>
+                                    <span class="mx-4">window</span>
+                                    <span class="mx-4">help</span>
+                                </div>
+                                <div class="w-[300px] h-[15px] bg-white rounded-md">
+                                    <span class="text-[#1B62F3] text-xs flex items-center ml-4">https://www.banniePlaylist.com</span>
+                                </div>
+                                <img src="assets/images/worldIcon.png" alt="world-icon" class="mr-5">
+                            </div>
+                        </div>
+                        
+                        <!-- barra lateral-->
+                        <div class="w-[170px] h-[385px] ml-5 absolute top-[45px] bg-[linear-gradient(to_bottom,#4B97F9_1%,#B4D4FE_50%,#FAFCFF_100%)] shadow-[inset_0_0_38.6px_6px_#4484EC] flex justify-center flex-wrap">
+                            <span class="font-redaction-bold text-white my-3">Bannie Playlist</span>
+                            <img src="assets/images/icon.png" alt="" class="h-32 object-contain rounded-lg shadow-inner shadow-[#5aa7ff]/100">
+                            <div class="border-white border py-0.5 px-2 rounded-full my-2 flex">
+                                <span class="text-xs text-white">Now listening</span>
+                                <img src="assets/images/listening.png" alt="" class="object-contain scale-75 ml-2">
+                            </div>
+                            <div id="playlist-list" class="h-[188px]"></div>
+                        </div>
+                        <div class="w-[585px] h-[385px] absolute top-[45px] left-[195px] bg-[url('assets/images/bg-reproductor.png')] bg-cover bg-center flex items-center">
                             
-                            
+                            <div class="w-[20px] h-[320px] ml-6 bg-blue-300"></div>
+                            <div class="flex relative">
+                                <img id="vinyl" alt="" class="h-[300px] object-contain animate-[spin_17s_linear_infinite] absolute left-[210px] shadow-xl shadow-[#5aa7ff]/100 rounded-full">
+                                <div class="w-[350px] h-[320px] bg-white relative shadow-xl shadow-[#5aa7ff]/100">
+                                    <!-- texto BANNIE -->
+                                    <div class="absolute inset-0 z-10 text-6xl text-[#5aa7ff] font-billo mt-7 ml-5">
+                                        <span class="animate-rotar-lados">b</span>
+                                        <span class="text-[#5aa7ff] animate-rotar-lados [animation-delay:0.1s]">a</span>
+                                        <span class="animate-rotar-lados [animation-delay:0.2s]">n</span>
+                                        <span class="animate-rotar-lados [animation-delay:0.3s]">n</span>
+                                        <span class="text-[#5aa7ff] animate-rotar-lados [animation-delay:0.4s]">i</span>
+                                        <span class="animate-rotar-lados [animation-delay:0.5s]">e</span>
+                                    </div>
+                                    
+                                    <!-- imagen de fondo -->
+                                    <img src="assets/images/bg-playlist.png" alt="" class="absolute inset-0 z-0 opacity-45">
+                                    <div class="overflow-hidden border-[#1B62F3] border-2 w-[239px] h-[80px] absolute top-24 left-7 bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] flex">
+                                        <img src="assets/images/starCinco.png" alt="" class="absolute w-28 -top-6 -left-3 animate-[spin_28s_linear_infinite]">
+                                        <img src="assets/images/starCinco.png" alt="" class="absolute w-24 left-40 animate-[spin_28s_linear_infinite]">
+                                        <img src="assets/images/starCuatro.png" alt="" class="absolute w-25 left-28 animate-[spin_28s_linear_infinite]">
+                                        <img src="assets/images/starCuatro.png" alt="" class="absolute w-28 animate-[spin_28s_linear_infinite]">
+                                        <img src="assets/images/starCinco.png" alt="" class="absolute w-32 left-14 bottom-1 animate-[spin_28s_linear_infinite]">
+                                    </div>
+                                    <img src="assets/images/iconUno.png" alt="" class="absolute w-5 left-[120px] top-[245px] animate-bounce [animation-delay:0s]">
+                                    <img src="assets/images/iconDos.png" alt="" class="absolute w-4 left-[135px] top-[238px] animate-bounce [animation-delay:0.3s]">
+                                    <img src="assets/images/iconTres.png" alt="" class="absolute w-3 left-[150px] top-[230px] animate-bounce [animation-delay:0.6s]">
+                                    
+                                    <img src="assets/images/Asset 6.png" alt="" class="absolute top-20 left-36">
+                                    <span class="absolute top-[93px] left-[265px] text-[#1B62F3] font-redaction-bold text-xs w-10">FUN TIME !</span>
+                                </div>
+                                <img src="assets/images/Asset 2.png" alt="" class="absolute left-[430px] top-[280px]">
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- controlador-->
+                    <div class="w-[800px] h-[80px] bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] rounded-b-xl flex justify-between items-center ">
+                        <div class="m-2 flex gap-1 items-baseline">
+                            <!-- play -->
+                            <button id="playBtn" class="transition-transform duration-200 hover:scale-110">
+                                <img src="assets/images/play.png" alt="play" id="playIcon" class="h-14 object-contain">
+                            </button>
+
+                            <!-- volver a empezar -->
+                            <button id="restartBtn" class="transition-transform duration-200 hover:scale-110">
+                                <img src="assets/images/stop.png" alt="pause" class="h-12 object-contain">
+                            </button>
+
+                            <!-- anterior -->
+                            <button id="prevBtn" class="transition-transform duration-200 hover:scale-110">
+                                <img src="assets/images/back.png" alt="back" class="h-10 object-contain">
+                            </button>
+
+                            <!-- siguiente -->
+                            <button id="nextBtn" class="transition-transform duration-200 hover:scale-110">
+                                <img src="assets/images/next.png" alt="next" class="h-10 object-contain">
+                            </button>
+                        </div>
+                        <div class="bg-white w-[300px] h-[60px] m-4 border-[#1B62F3] border-2 rounded-xl shadow-inner shadow-[#5aa7ff]/100 flex flex-col justify-center items-center overflow-hidden relative">
+                            <div id="marquee-container" class="top-2 left-80 absolute flex"></div>
+                            <span id="song-artist" class="text-[#F77DD9] text-sm absolute top-8">Artista</span>
                         </div>
                     </div>
                 </div>
-                <!-- controlador-->
-                <div class="w-[800px] h-[80px] bg-[linear-gradient(to_bottom,#498AF1_1%,#B5DFF7_48%,#84BBF3_99%)] rounded-b-xl flex justify-between items-center ">
-                    <div class="m-2 flex gap-1 items-baseline">
-                        <!-- play -->
-                        <button id="playBtn" class="transition-transform duration-200 hover:scale-110">
-                            <img src="assets/images/play.png" alt="play" id="playIcon" class="h-14 object-contain">
-                        </button>
-
-                        <!-- volver a empezar -->
-                        <button id="restartBtn" class="transition-transform duration-200 hover:scale-110">
-                            <img src="assets/images/stop.png" alt="pause" class="h-12 object-contain">
-                        </button>
-
-                        <!-- anterior -->
-                        <button id="prevBtn" class="transition-transform duration-200 hover:scale-110">
-                            <img src="assets/images/back.png" alt="back" class="h-10 object-contain">
-                        </button>
-
-                        <!-- siguiente -->
-                        <button id="nextBtn" class="transition-transform duration-200 hover:scale-110">
-                            <img src="assets/images/next.png" alt="next" class="h-10 object-contain">
-                        </button>
-                    </div>
-                    <div class="bg-white w-[300px] h-[60px] m-4 border-[#1B62F3] border-2 rounded-xl shadow-inner shadow-[#5aa7ff]/100 flex flex-col justify-center items-center overflow-hidden relative">
-                        <div id="marquee-container" class="top-2 left-80 absolute flex"></div>
-                        <span id="song-artist" class="text-[#F77DD9] text-sm absolute top-8">Artista</span>
-                    </div>
-                </div>
             </div>
-        </div>
-    </main>
-    <footer class="w-full h-14 bg-[linear-gradient(to_bottom,#D0E8F9_0%,#9ED0F8_30%,#B6E1FC_60%,#A5D3F6_100%)] bg-no-repeat bg-cover flex place-items-center">
-        <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="bg-[linear-gradient(to_bottom,#5F79F0_0%,#5169DA_50%,#5F79F0_100%)] w-44 h-10 rounded-lg ml-10 flex items-center justify-center text-white">
-            repositorio en github !!
-        </a>
-        <div class="bg-[linear-gradient(to_bottom,#86B0F4_0%,#A4D0F7_50%,#86B0F4_100%)] w-44 h-10 rounded-lg ml-5 flex items-center justify-center text-white">
-            <span>bannie playlist !!</span>
-        </div>
-    </footer>
+            <div class="bg-[linear-gradient(to_bottom,#D0E8F9_0%,#9ED0F8_30%,#B6E1FC_60%,#A5D3F6_100%)] flex place-items-center">
+                <div class="w-screen flex p-4">
+                    <a href="https://github.com/agos28/proyecto-2-banniePlaylist-tailwind" target="_blank" class="bg-[linear-gradient(to_bottom,#5F79F0_0%,#5169DA_50%,#5F79F0_100%)] w-44 h-10 rounded-lg ml-10 flex items-center justify-center text-white">
+                repositorio en github !!
+                </a>
+                <div class="bg-[linear-gradient(to_bottom,#86B0F4_0%,#A4D0F7_50%,#86B0F4_100%)] w-44 h-10 rounded-lg ml-5 flex items-center justify-center text-white">
+                    <span>bannie playlist !!</span>
+                </div>
+                </div>
+            
+            </div>
+        </main>
+    </div>
     <audio id="audio-player"></audio>
 <script src="assets/js/main.js"></script>
 </body>
